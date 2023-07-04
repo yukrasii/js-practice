@@ -1,16 +1,18 @@
-function getBiggerOfTwoNumbers (number1, number2) {
-    if (typeof number1 !== 'number' ||
-        typeof number2 !== 'number' ||
-        isNaN(number1) ||
-        isNaN(number2) ) {
+function checkNumberForParity (number) {
+    if (typeof number !== 'number' ||
+        isNaN(number)) {
             return 'wrong input'
         }
 
         else {
-            if (number1 > number2) {
-                return number1
+            if (number%2 === 0) {
+
+                return 'number is even'
             }
-            else {return number2}
+            else {
+
+                return 'number is odd'
+            }
         }
 }
 
