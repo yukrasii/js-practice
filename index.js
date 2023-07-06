@@ -1,8 +1,14 @@
-function getBiggerOfTwoNumbers (number1, number2) {
+/**
+ * This function compares two numbers and returns bigger number
+ * @param {number} number1 
+ * @param {number} number2 
+ * @returns {string}
+ */
+
+function getBiggerNumber (number1, number2) {
     if (typeof number1 !== 'number' ||
         typeof number2 !== 'number' ||
-        isNaN(number1) ||
-        isNaN(number2) ) {
+        isNaN(number1 - number2)) {
             return 'wrong input'
         }
 
@@ -10,7 +16,8 @@ function getBiggerOfTwoNumbers (number1, number2) {
             if (number1 > number2) {
                 return number1
             }
-            else {return number2}
+            return number2
         }
 }
 
+/*getBiggerNumber(2,5)*/
