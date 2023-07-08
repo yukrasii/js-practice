@@ -1,53 +1,49 @@
 
-let counter1 = 0;
+let counter = 0;
 
 /**
- * This fucntion accepts the number, start the loop 'while', checks if number value is even and if it is, it shows the value on console. The way to break loop here is the condition inside it.
- * @param {number} counter1 
+ * This fucntion accepts the number, start the loop 'while', checks if number value is even and if it is, it shows the value on console.
+ *  The way to break loop here is the condition inside it.
+ * 
+ * @param {number} counter 
  * @returns {string}
  */
 
-function loop1 (counter1) {
-    console.log(`counter = ${counter1}`)
-    
-    while (counter1 <= 10) {
-        
-        if (++counter1 %2 === 0) {
-            console.log(`counter = ${counter1}`)
+function loop1 (counter) {
+        while (counter <= 10) {
+        // statement changed to ternary operator
+        counter %2 === 0 ? console.log(`counter = ${counter}`) : null
+        counter++
     }
     
+
+return console.log(`after loop is stoped the value 'counter' is ${counter}`)
+
 }
 
-return console.log(`after loop is stoped the value 'counter1' is ${counter1}`)
-
-}
-
-loop1(counter1)
+loop1(counter)
 
 /**
  * This fucntion accepts the number(counter), start the loop 'while', checks if number value is even and if it is, it shows the value on console.
  *  The way to break loop here is the 'break' operator when the value of counter exceeds condition.
- * @param {number} counter2 
+ * @param {number} counter 
  * @returns {string}
  */
 
-let counter2 = 0;
-
-function loop2 (counter2) {
+function loop2 (counter) {
 while (true) {
     
-    if (counter2 %2 === 0) {
-        console.log(`counter = ${counter2}`)
-    }
+    // statement changed to ternary operator
+    counter % 2 === 0 ? console.log(`counter = ${counter}`) : null
 
-    if (counter2++ > 10) {
+    if (counter++ >= 10) {
         break
     } 
 }
     
-    return console.log(`after loop is stoped the value 'counter2' is ${counter2}`)
+    return console.log(`after loop is stoped the value 'counter' is ${counter}`)
 
 }
 
 
-loop2(counter2)
+loop2(counter)
