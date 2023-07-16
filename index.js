@@ -1,39 +1,24 @@
-// JS Arrays methods practice
+const array = [ 1,2,3,4,5,6,7,8,9,10,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]
 
-const user = [
-    'test1',
-     'test2',
-      'test3',
-       'test4',
-        'test5',
-         'test6'
-]
+/**
+ * This function sorts data (numbers) in array from low to high value
+ * @param {number} currentValue 
+ * @param {number} nextValue 
+ * @returns {number}
+ */
+function compareFunction(currentValue, nextValue) {
+    if (currentValue > nextValue) {
+        return -1
+    }
 
-const user2 = [
-    'test22',
- 'test23',
-  'test24',
-   'test25',
-    'test26']
+    if (currentValue < nextValue) {
+        return 1
+    }
 
-user[4] = 'test5'
+    if (currentValue = nextValue) {
+        return 0
+    }
+} 
 
-user.push('test7')
+//also we can use just if/else
 
-user.push('test8')
-
-user.pop() //'test8'
-
-
-
-
-//slice first half of array. test1 - test3 (/ 2)(+ 2 test4, test5)
-const copiedArr = user.slice(0, user.length / 2  + 2)
-
-
-
-
-//.concat opens concated array and pushes it as data
-
- const concated = user.concat(user2_)
- 
