@@ -50,3 +50,11 @@ const User = function (firstName, lastName, email, age, isMale, isSubscribed) {
             const adultUsers = usersArray1.filter(function(user) {
                 return user.age > 17
             })
+
+            //get array of adult male users without subscribe (filter)
+
+            const adultMaleUsersWithoutSubscribe = usersArray1.filter (function (user) {
+                // return user.age >= 18 && user.isMale === true && user.isSubscribed === false
+
+                return user.age >= 18 && user.isMale && !user.isSubscribed
+            })
