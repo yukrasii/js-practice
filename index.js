@@ -39,5 +39,9 @@ Cat.prototype = catMeow
 
 const cat1 = new Cat ('Barsik', 10, 'Cheshire')
 
+const cat2 = new Cat ('Abracadarsik', 20, 'Juche')
+
+// cat1.meow === cat2.meow //true
+
 
 
