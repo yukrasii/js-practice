@@ -6,11 +6,24 @@ function Cat (name, age, breed,) {
 
 //meow eat  
 
+// const catOptions = {
+//     meow: function (meow) {
+//     return `${this.name} says ${meow}`
+// },
+
+//     sleep: function () {
+//     return `${this.name} is sleeping now`
+// }
+// }
+
+// Cat.prototype = catOptions
+
 const catMeow = {
     meow: function (meow) {
     return `${this.name} says ${meow}`
+},
 }
-}
+
 
 const catSleep = {
     sleep: function () {
