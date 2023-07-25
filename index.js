@@ -1,47 +1,45 @@
-function Cat (name, age, breed,) {
-    this.name = name;
-    this.age = age;
-    this.breed = breed
+/**
+ * Function constructor creates ladders
+ * @param {number} maxStep 
+ * @param {number} minStep 
+ */
+
+
+function Ladder (maxStep, minStep) {
+this.currentStep = 0
+this.maxStep = maxStep,
+this.minStep = minStep
 }
 
-//meow eat  
+/**
+ * Object-prototype of function Ladder with options to change ladders.
+ */
+const ladderOptions = {
 
-// const catOptions = {
-//     meow: function (meow) {
-//     return `${this.name} says ${meow}`
-// },
+    showStep: function () {
+        return this.currentStep
+    },
 
-//     sleep: function () {
-//     return `${this.name} is sleeping now`
-// }
-// }
+    up: function () {
+        if (this.currentStep < this.maxStep) {
+            return ++this.currentStep
+            
+        }
+        return `You stay on ${this.maxStep}. This is the top`
+    
+    },
+    
+    down: function () {
+        if (this.currentStep > this.minStep) {
+            return --this.currentStep
+        }
 
-// Cat.prototype = catOptions
+        return `You stay on ${this.currentStep}. This is the bottom`
+        
+    }
 
-const catMeow = {
-    meow: function (meow) {
-    return `${this.name} says ${meow}`
-},
 }
 
+Ladder.prototype = ladderOptions
 
-const catSleep = {
-    sleep: function () {
-     return `${this.name} is sleeping now`
-}
-}
-
-
-//example of prototype inheritance
-catMeow.__proto__ = catSleep
-
-Cat.prototype = catMeow
-
-const cat1 = new Cat ('Barsik', 10, 'Cheshire')
-
-const cat2 = new Cat ('Abracadarsik', 20, 'Juche')
-
-// cat1.meow === cat2.meow //true
-
-
-
+const ladder1 = new Ladder (10, -10)
